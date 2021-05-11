@@ -49,7 +49,7 @@ app.use(cors());
 
 
 const connection_url =
-  "mongodb+srv://sparkeye8:papra@cluster0.ply7b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://sparkeye8://password//@cluster0.ply7b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose.connect(connection_url, {
   useCreateIndex: true,
   useNewUrlParser: true,
