@@ -60,6 +60,11 @@ mongoose.connect(connection_url, {
 
 app.get("/", (req, res) => res.status(200).send("hello world"));
 
+
+
+
+
+
 app.get("/messages/sync", (req, res) => {
     const requestedid = req.query.id;
     console.log(requestedid);
