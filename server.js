@@ -4,7 +4,7 @@ import Messages from "./dbMssages.js";
 import Pusher from "pusher";
 import cors from "cors";
 import bodyParser from "body-parser";
-const functions = require("firebase-functions");
+// const functions = require("firebase-functions");
 
 //app config
 const app = express();
