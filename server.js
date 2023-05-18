@@ -9,12 +9,24 @@ import bodyParser from "body-parser";
 const app = express();
 const port = process.env.PORT || 9000;
 
+// const pusher = new Pusher({
+//   appId: "1188927",
+//   key: "cee6b9ad2c2f3563f0c7",
+//   secret: "9cde7c8b0cfeb94651b6",
+//   cluster: "ap2",
+//   useTLS: true
+// });
+
 const pusher = new Pusher({
-  appId: "1188927",
-  key: "cee6b9ad2c2f3563f0c7",
-  secret: "9cde7c8b0cfeb94651b6",
-  cluster: "ap2",
-  useTLS: true
+  appId: "app-id",
+  key: "app-key",
+  secret: "app-secret",
+  host: 'socket.gleemeet.com',
+ 
+
+    encrypted: true,
+    disableStats: true,
+    enabledTransports: ['ws', 'wss'],
 });
 
 const db = mongoose.connection; 
@@ -49,7 +61,8 @@ app.use(cors());
 
 
 const connection_url =
-  "mongodb+srv://sparkeye8://password//@cluster0.ply7b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://sparkeye8:spark@cluster0.ply7b.mongodb.net/?retryWrites=true&w=majority";
+  
 mongoose.connect(connection_url, {
   useCreateIndex: true,
   useNewUrlParser: true,
